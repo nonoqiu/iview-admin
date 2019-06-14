@@ -1,4 +1,5 @@
 const path = require('path')
+require('babel-polyfill')
 
 const resolve = dir => {
   return path.join(__dirname, dir)
@@ -35,9 +36,17 @@ module.exports = {
       .set('_c', resolve('src/components'))
   },
   // 打包时不生成.map文件
-  productionSourceMap: false
+  productionSourceMap: false,
   // 这里写你调用接口的基础路径，来解决跨域，如果设置了代理，那你本地开发环境的axios的baseUrl要写为 '' ，即空字符串
   // devServer: {
   //   proxy: 'localhost:3000'
   // }
+
+  // vue iview-admin 如何兼容IE浏览器:  https://blog.csdn.net/Gas_station/article/details/85336181
+  // 关键配置：node_modules里面需要用babel-loader进行编译的包（node_modules的包如果没做 es6 => es5 转码则需要自己用babel-polyfill进行手动处理）
+  // 如果IE下还跑不起来，控制台发现有其他es6语法的，尝试调试去找到底是哪个包
+  transpileDependencies: [
+    'iview',
+    'axios'
+  ]
 }

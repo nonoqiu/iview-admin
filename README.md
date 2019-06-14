@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://www.iviewui.com">
-        <img width="200" src="https://file.iviewui.com/logo-new.svg">
+        <img width="40" height="40" src="https://file.iviewui.com/logo-new.svg">
     </a>
 </p>
 
@@ -39,7 +39,10 @@ npm run dev
 npm run build
 ```
 
-## 加入QQ群，获取最新更新咨询，和3000+开发者交流学习
+--------------------------------------
+## 20190614 更新如下功能(qiu) 
+* 新增babel-polyfill解决iview-admin兼容IE浏览器问题;
+
 
 ![image](https://github.com/iview/iview-admin/raw/2.0/src/assets/images/groups.jpg)
 
@@ -180,9 +183,6 @@ npm run build
 
 - 消息中心
 ![image](https://github.com/iview/iview-admin/raw/dev/github-gif/message.gif)
-
-### 💖💖 If you find this project helpful, maybe you can buy me a coffee. 💖💖
-![image](https://github.com/iview/iview-admin/raw/dev/github-gif/code.png)
 
 
 ## License
